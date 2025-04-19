@@ -1,0 +1,42 @@
+.help-container {
+    max-width: 800px;
+    margin: 4rem auto;
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    color: #2c3e50;
+    line-height: 1.6;
+  }
+  
+  body.dark-mode .help-container {
+    background-color: #2c2c3c;
+    color: #f5f5f5;
+  }
+  
+  body.color-blind .help-container {
+    background-color: #ffffe0;
+    color: #000080;
+  }
+  
+  .help-container h1 {
+    font-size: 32px;
+    margin-bottom: 1rem;
+    color: #34495e;
+  }
+  
+  .help-container h2 {
+    margin-top: 2rem;
+    font-size: 24px;
+    color: #5563de;
+  }
+  
+  .help-container ol,
+  .help-container ul {
+    padding-left: 1.5rem;
+  }
+  
+  .faq p {
+    margin: 0.5rem 0;
+  }
+  

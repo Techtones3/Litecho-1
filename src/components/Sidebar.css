@@ -1,0 +1,142 @@
+/* Dark Mode Sidebar Hover */
+body.dark-mode .sidebar-header:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Color Blind Mode Sidebar Hover */
+body.color-blind .sidebar-header:hover {
+  background-color: #dcdcdc;
+}
+
+/* Main Sidebar Styles */
+.sidebar {
+  width: 250px;
+  background-color: #6fa1d3;
+  color: #ecf0f1;
+  min-height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Dark Mode Override */
+body.dark-mode .sidebar {
+  background-color: #1e1e2f;
+  color: #ffffff;
+}
+
+/* Color Blind Mode Override */
+body.color-blind .sidebar {
+  background-color: #ffffe0;
+  color: #000080;
+}
+
+/* Sidebar Header */
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  padding: 0.5rem 1rem;
+  margin-bottom: 2rem;
+}
+
+
+.sidebar-header:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+  transform: scale(1.02);
+}
+
+.sidebar-header img.register-logo2 {
+  width: 25px;
+  height: 25px;
+}
+
+.sidebar-header h2 {
+  font-size: 1.6rem;
+  color: inherit;
+  margin: 0;
+}
+
+/* Sidebar Title */
+.sidebar h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+/* Nav List */
+.sidebar nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar nav ul li {
+  margin-bottom: 15px;
+}
+
+.sidebar nav ul li a {
+  color: #ecf0f1;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 8px 12px;
+  display: block;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Active & Hover Links */
+.sidebar nav ul li a:hover,
+.sidebar nav ul li a.active-link {
+  background-color: #34495e;
+  transform: translateX(5px);
+}
+
+body.color-blind .sidebar nav ul li a {
+  color: #000080;
+}
+
+body.color-blind .sidebar nav ul li a:hover,
+body.color-blind .sidebar nav ul li a.active-link {
+  background-color: #aaccff;
+}
+
+/* Remove unused sections */
+.audio-history,
+.sidebar-footer,
+.sidebar-footer button.logout,
+.sidebar-footer button.settings,
+.delete-button {
+  display: none !important;
+}
+
+.nav-link-like {
+  display: block;
+  width: 100%;
+  font-size: 18px;
+  color: #ecf0f1;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-link-like:hover {
+  background-color: #34495e;
+  transform: translateX(5px);
+}
+
+body.color-blind .nav-link-like {
+  color: #000080;
+}
+
+body.color-blind .nav-link-like:hover {
+  background-color: #aaccff;
+}
+
+.sidebar-header img.register-logo2 {
+  width: 30px;
+  height: 30px;
+}
