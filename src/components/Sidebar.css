@@ -140,3 +140,29 @@ body.color-blind .nav-link-like:hover {
   width: 30px;
   height: 30px;
 }
+
+/* Toggle Button */
+.sidebar-toggle {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  font-size: 1.5rem;
+  background: #5f6ee0;
+  color: white;
+  border: none;
+  padding: 0.4rem 0.7rem;
+  border-radius: 6px;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+/* Sidebar Closed State */
+.sidebar.closed {
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.sidebar.open {
+  transform: translateX(0);
+  transition: transform 0.3s ease-in-out;
+}
