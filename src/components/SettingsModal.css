@@ -27,9 +27,10 @@
 }
 
 /* Modal box */
+/* Add or adjust inside .settings-modal */
 .settings-modal {
   background: var(--modal-bg);
-  color: var(--modal-text);
+  color: var(--modal-text) !important;    /* <- Force correct text color */
   padding: 24px 30px;
   border-radius: var(--border-radius);
   width: 360px;
@@ -37,7 +38,10 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
+  z-index: 9999; /* Ensure on top */
+  position: relative;
 }
+
 
 .settings-modal h2 {
   font-size: 22px;
