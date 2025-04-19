@@ -38,7 +38,9 @@ const AppRoutes = ({ isLoggedIn, setIsLoggedIn }) => {
         path="/"
         element={<Navigate to={isLoggedIn ? "/home" : "/login"} replace />}
       />
-      <Route path="*" element={<Navigate to="/" replace />} />
+    <Route path="*" element={<h2>404 - Page Not Found</h2>} />
+
+
     </Routes>
   );
 };

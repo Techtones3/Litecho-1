@@ -29,6 +29,14 @@
   font-family: "Segoe UI", sans-serif;
 }
 
+.avatar-img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-left: 10px;
+}
+
 /* ========== Left: Brand/Title ========== */
 .navbar-left {
   display: flex;
