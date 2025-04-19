@@ -4,21 +4,21 @@
    Base Variables and Styles
 ---------------------------------*/
 :root {
-  --modal-bg: #ffffff;
-  --modal-text: #000000;
+  /* Default color variables (light mode) */
+  --modal-bg: #fff;
+  --modal-text: #000;
   --overlay-bg: rgba(0, 0, 0, 0.5);
-  --button-bg: #5f6ee0;
-  --button-text: #ffffff;
-  --border-radius: 12px;
+  --button-bg: #007BFF;
+  --button-text: #fff;
 }
 
-/* Modal overlay */
+/* Modal overlay style */
 .modal-overlay {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   background: var(--overlay-bg);
   display: flex;
   justify-content: center;
@@ -26,103 +26,54 @@
   z-index: 1000;
 }
 
-/* Modal box */
-/* Add or adjust inside .settings-modal */
-.settings-modal {
+/* Modal content style */
+.modal-content {
   background: var(--modal-bg);
-  color: var(--modal-text) !important;    /* <- Force correct text color */
-  padding: 24px 30px;
-  border-radius: var(--border-radius);
-  width: 360px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  z-index: 9999; /* Ensure on top */
-  position: relative;
+  color: var(--modal-text);
+  padding: 20px;
+  border-radius: 8px;
+  width: 300px;
 }
 
-
-.settings-modal h2 {
-  font-size: 22px;
-  margin-bottom: 8px;
-}
-
-/* Form elements */
-.settings-modal label {
-  display: flex;
-  flex-direction: column;
-  font-weight: 500;
-  font-size: 14px;
-  gap: 6px;
-}
-
-.settings-modal select,
-.settings-modal input[type="color"],
-.settings-modal input[type="checkbox"] {
-  padding: 6px;
-  font-size: 14px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-}
-
-/* Buttons */
+/* Modal buttons container */
 .modal-buttons {
+  margin-top: 20px;
   display: flex;
   justify-content: space-between;
-  gap: 12px;
-  margin-top: 20px;
-}
-
-.modal-buttons button {
-  flex: 1;
-  padding: 10px;
-  font-weight: 600;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-}
-
-.save-button {
-  background-color: var(--button-bg);
-  color: var(--button-text);
-}
-
-.cancel-button {
-  background-color: #ccc;
-  color: #000;
-}
-
-.reset-button {
-  background-color: #ff6b6b;
-  color: #fff;
 }
 
 /* -------------------------------
-   Dark Mode
+   Dark Mode (activated via nav bar toggle)
 ---------------------------------*/
+/* Apply these styles when the "dark" class is on the body */
 body.dark {
-  --modal-bg: #1e1e1e;
-  --modal-text: #f1f1f1;
+  --modal-bg: #2c2c2c;
+  --modal-text: #e4e4e4;
   --overlay-bg: rgba(0, 0, 0, 0.8);
-  --button-bg: #4c5be0;
-  --button-text: #ffffff;
-}
-
-/* -------------------------------
-   Color-Blind Mode
----------------------------------*/
-body.color-blind-mode {
-  --modal-bg: #f9f9f9;
-  --modal-text: #000;
-  --button-bg: #0366d6;
+  --button-bg: #0056b3;
   --button-text: #fff;
 }
 
-/* Combined modes */
+/* -------------------------------
+   Color-Blind Mode (activated via nav bar toggle)
+---------------------------------*/
+/* Apply these styles when the "color-blind-mode" class is on the body */
+body.color-blind-mode {
+  --modal-bg: #f9f9f9;
+  --modal-text: #000;
+  --overlay-bg: rgba(0, 0, 0, 0.5);
+  --button-bg: #005a9c;
+  --button-text: #fff;
+}
+
+/* -------------------------------
+   Combined Dark Mode and Color-Blind Mode
+---------------------------------*/
+/* When both toggles are active */
 body.dark.color-blind-mode {
-  --modal-bg: #2c2c2c;
-  --modal-text: #f9f9f9;
-  --button-bg: #008ecc;
-  --button-text: #ffffff;
+  --modal-bg: #3a3a3a;
+  --modal-text: #f1f1f1;
+  --overlay-bg: rgba(0, 0, 0, 0.85);
+  --button-bg: #007acc;
+  --button-text: #fff;
 }
