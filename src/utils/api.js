@@ -2,7 +2,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "https://litecho-1-backend-1.onrender.com",
+  baseURL: "https://litecho-1-backend.onrender.com",
 });
 
 export default api;
