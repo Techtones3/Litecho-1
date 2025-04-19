@@ -2,15 +2,13 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import "./Sidebar.css";
 
-function Sidebar({ onOpenSettings }) {
-  const isLoggedIn = localStorage.getItem("loggedIn") === "true";
-
+function Sidebar({ onOpenSettings, isLoggedIn }) {
   if (!isLoggedIn) return null;
 
   return (
     <div className="sidebar">
       <div className="sidebar-header">
-        <img src="/logo1.svg" alt="headphones" className="register-logo2" />
+      <img src="/logo1.svg" alt="headphones" className="register-logo2"/>
         <h2>LitEcho</h2>
       </div>
 

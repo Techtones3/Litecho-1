@@ -65,16 +65,25 @@ function App() {
   return (
     <ErrorBoundary>
       <div className="app-container">
-        {isLoggedIn && <Sidebar onOpenSettings={() => setSettingsModalOpen(true)} />}
+        {/* Sidebar only if logged in */}
+        <Sidebar
+          isLoggedIn={isLoggedIn}
+          onOpenSettings={() => setSettingsModalOpen(true)}
+        />
+
         <div className="main-content">
           <AppRoutes isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
         </div>
+
+        {/* Settings Modal */}
         <SettingsModal
           isOpen={settingsModalOpen}
           onClose={() => setSettingsModalOpen(false)}
           settings={settings}
           onSave={handleSaveSettings}
         />
+
+        {/* Onboarding Tour only if logged in */}
         {isLoggedIn && <OnboardingTour />}
       </div>
     </ErrorBoundary>

@@ -32,7 +32,7 @@ function Login({ setIsLoggedIn }) {
     <div className="register-container">
       {/* Left side image */}
       <div className="register-left">
-        <img src="/side.jpg" alt="headphones" className="register-image" />
+      <img src="/side.jpg" alt="headphones" className="register-image"/>
       </div>
 
       {/* Right side form */}

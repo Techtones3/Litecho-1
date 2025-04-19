@@ -34,14 +34,14 @@ function Register() {
     <div className="register-container">
       {/* Left side image */}
       <div className="register-left">
-        <img src="/side.jpg" alt="headphones" className="register-image" />
+      <img src="/side.jpg" alt="headphones" className="register-image"/>
       </div>
 
       {/* Right side form */}
       <div className="register-right">
         <div className="register-content">
           <div className="register-logo-block">
-            <img src="/logo1.svg" alt="logo" className="register-logo2" />
+            <img src={"logo1.svg"} alt="logo" className="register-logo2"/>
             <h1 className="register-logo">LitEcho</h1>
           </div>
 

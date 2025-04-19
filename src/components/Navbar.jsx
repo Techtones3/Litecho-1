@@ -116,13 +116,14 @@ const Navbar = () => {
 
         {/* Profile Avatar and Dropdown */}
         <div className="profile-wrapper" ref={dropdownRef}>
-          <img
-            src="/profile.jpg"
-            alt="User Avatar"
-            className="navbar-avatar"
-            title="Profile"
-            onClick={() => setDropdownOpen(!dropdownOpen)}
-          />
+        <img
+  src="/profile.jpg"
+  alt="User Avatar"
+  className="navbar-avatar"
+  title="Profile"
+  onClick={() => setDropdownOpen(!dropdownOpen)}
+/>
+
           {dropdownOpen && (
             <div className="profile-dropdown">
               <button onClick={() => navigate("/profile")}>View Profile</button>
