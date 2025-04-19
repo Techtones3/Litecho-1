@@ -41,7 +41,7 @@ function Register() {
       <div className="register-right">
         <div className="register-content">
           <div className="register-logo-block">
-            <img src={"logo1.svg"} alt="logo" className="register-logo2"/>
+            <img src="logo1.svg" alt="logo" className="register-logo2"/>
             <h1 className="register-logo">LitEcho</h1>
           </div>
 
