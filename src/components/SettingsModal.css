@@ -27,12 +27,14 @@
 }
 
 /* Modal content style */
-.modal-content {
+.modal-content, .settings-modal {
   background: var(--modal-bg);
   color: var(--modal-text);
   padding: 20px;
   border-radius: 8px;
   width: 300px;
+  max-height: 80vh;
+  overflow-y: auto;
 }
 
 /* Modal buttons container */
@@ -42,10 +44,48 @@
   justify-content: space-between;
 }
 
+.modal-buttons button {
+  padding: 8px 16px;
+  font-size: 14px;
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.modal-buttons button:hover {
+  background-color: #0056b3;
+}
+
+.settings-modal select,
+.settings-modal input[type="color"],
+.settings-modal input[type="checkbox"] {
+  margin-top: 4px;
+  margin-bottom: 12px;
+  width: 100%;
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.settings-modal h2 {
+  margin-bottom: 16px;
+  font-size: 20px;
+  color: var(--modal-text);
+  text-align: center;
+}
+
+.settings-modal label {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--modal-text);
+}
+
 /* -------------------------------
    Dark Mode (activated via nav bar toggle)
 ---------------------------------*/
-/* Apply these styles when the "dark" class is on the body */
 body.dark {
   --modal-bg: #2c2c2c;
   --modal-text: #e4e4e4;
@@ -57,7 +97,6 @@ body.dark {
 /* -------------------------------
    Color-Blind Mode (activated via nav bar toggle)
 ---------------------------------*/
-/* Apply these styles when the "color-blind-mode" class is on the body */
 body.color-blind-mode {
   --modal-bg: #f9f9f9;
   --modal-text: #000;
@@ -69,7 +108,6 @@ body.color-blind-mode {
 /* -------------------------------
    Combined Dark Mode and Color-Blind Mode
 ---------------------------------*/
-/* When both toggles are active */
 body.dark.color-blind-mode {
   --modal-bg: #3a3a3a;
   --modal-text: #f1f1f1;
